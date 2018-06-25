@@ -7,7 +7,7 @@ There will be 2 user roles: Admin (can edit) and User (can only filter and searc
 
 ### Train
 
-A train must contain the following data: ID(name), Departure destination, Arrival destination, Departure time, Arrival time, Confirmed status, Wagon composition, Number of reserved seats.
+A train must contain the following data: ID, name, Departure destination, Arrival destination, Departure time, Arrival time, Confirmed status, Wagon composition, Number of reserved seats.
 
 * id: number - unique ID
 * name: string - name of the train
