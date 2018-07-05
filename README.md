@@ -5,6 +5,22 @@ This task should follow the following specification:
 
 There will be 2 user roles: Admin (can edit) and User (can only filter and search)
 
+### Modules
+* Train Dashboard Module
+  * View all
+  * View by ID
+  * Create new
+* Wagons
+  * View all
+  * View by ID
+  * Create new
+* Home Module
+* 404 Module
+* Login - Optional
+* register - Optional
+* Forgot password - Optional
+* Search TBD
+
 ### Train
 
 A train must contain the following data: ID, name, Departure destination, Arrival destination, Departure time, Arrival time, Confirmed status, Wagon composition, Number of reserved seats.
@@ -16,7 +32,7 @@ A train must contain the following data: ID, name, Departure destination, Arriva
 * departureTime: timestamp
 * arrivalTime: timestamp
 * confirmed: boolean - shows the status of the train, true means that the train will departure on time
-* wagons: Wagon[]
+* wagons: Wagon[] - if a wagon is removed remove it form the trains that has it
 * reservedSeats: number
 
 
@@ -39,3 +55,12 @@ The user can filter the trains by entering: ID(name), Departure destination, Arr
 ## Role User
 
 ## API
+
+https://github.com/samuil4/ticket-reservation-demo-server
+
+### End points
+
+* GET/trains
+* GET/PUT/POST/DELETE trains/:id
+* GET/PUT/POST/DELETE wagons
+* GET/PUT/POST/DELETE wagons/:id
