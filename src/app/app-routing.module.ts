@@ -19,7 +19,7 @@ export const routes: Routes = [
         loadChildren: './home/home.module#HomeModule'
       },
       {
-        path: 'trains-dashboard',
+        path: 'trains',
         loadChildren:
           './trains-dashboard/trains-dashboard.module#TrainsDashboardModule'
       },
