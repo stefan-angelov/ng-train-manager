@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "ng-train-manager"
+  "defaultProject": "ng-train-manager",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
