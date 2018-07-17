@@ -38,12 +38,8 @@ export const routes: Routes = [
     component: SimpleLayoutComponent,
     children: [
       {
-        path: 'login',
-        loadChildren: './login/login.module#LoginModule'
-      },
-      {
-        path: 'register',
-        loadChildren: './register/register.module#RegisterModule'
+        path: '',
+        loadChildren: './auth/auth.module#AuthModule'
       }
     ]
   },
