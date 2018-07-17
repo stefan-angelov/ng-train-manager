@@ -36,7 +36,16 @@ export const routes: Routes = [
   {
     path: 'auth',
     component: SimpleLayoutComponent,
-    children: []
+    children: [
+      {
+        path: 'login',
+        loadChildren: './login/login.module#LoginModule'
+      },
+      {
+        path: 'register',
+        loadChildren: './register/register.module#RegisterModule'
+      }
+    ]
   },
   {
     path: '**',
