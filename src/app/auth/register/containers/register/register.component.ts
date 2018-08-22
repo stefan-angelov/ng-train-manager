@@ -7,7 +7,7 @@ import { RegisterService } from '../../services/register.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-
+  countriesFound = [];
   constructor(private registerService: RegisterService) { }
 
   ngOnInit() {
@@ -16,7 +16,12 @@ export class RegisterComponent implements OnInit {
   onSearchCountry(searchTerm) {
     this.registerService.getCoutries(searchTerm)
       .subscribe((res) => {
-        console.log(res);
+        this.countriesFound = res.map((country) => {
+          return {
+            displayName: country.name,
+            value: country.name
+          }
+        })
       })
   }
 

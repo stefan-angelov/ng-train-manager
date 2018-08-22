@@ -25,12 +25,6 @@
     controlLabel="Country*"
     controlPlaceholder="Type your country name">
   </sq-typeahead>
-  <sq-typeahead formControlName="city"
-    [searchResults]="cities"
-    (onUserInputEnd)="searchCity.emit($event)"
-    controlLabel="City*"
-    controlPlaceholder="Type your city name">
-  </sq-typeahead>
   <sq-dropdown formControlName="gender" 
     [options]="genderOptions" 
     controlLabel="Gender*" 

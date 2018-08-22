@@ -8,9 +8,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class RegisterFormComponent implements OnInit {
   @Input() coutries = [];
-  @Input() cities = [];
   @Output() searchCountry = new EventEmitter();
-  @Output() searchCity = new EventEmitter();
 
   genderOptions = [
     {
@@ -30,7 +28,6 @@ export class RegisterFormComponent implements OnInit {
     password: new FormControl(null, [Validators.required, Validators.minLength(6)]),
     repeatPassword: new FormControl(null, Validators.required),
     country: new FormControl(null, Validators.required),
-    city: new FormControl(null, Validators.required),
     gender: new FormControl(null, Validators.required)
   })
   constructor() { }
