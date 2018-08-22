@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <sq-input formControlName="firstName" 
+    controlLabel="First name*" 
+    controlPlaceholder="Enter your first name">
+  </sq-input>
+  <sq-input formControlName="lastName" 
+    controlLabel="Last name*" 
+    controlPlaceholder="Enter your last name">
+  </sq-input>
+  <sq-input formControlName="email" 
+    controlLabel="Email*" 
+    controlPlaceholder="Enter your email">
+  </sq-input>
+  <sq-input formControlName="password" 
+    controlLabel="Password*" 
+    controlPlaceholder="Enter password">
+  </sq-input>
+  <sq-input formControlName="repeatPassword" 
+    controlLabel="Repeat Password*" 
+    controlPlaceholder="Repeat password">
+  </sq-input>
+  <sq-typeahead formControlName="country"
+    [searchResults]="coutries"
+    (onUserInputEnd)="searchCountry.emit($event)"
+    controlLabel="Country*"
+    controlPlaceholder="Type your country name">
+  </sq-typeahead>
+  <sq-typeahead formControlName="city"
+    [searchResults]="cities"
+    (onUserInputEnd)="searchCity.emit($event)"
+    controlLabel="City*"
+    controlPlaceholder="Type your city name">
+  </sq-typeahead>
+  <sq-dropdown formControlName="gender" 
+    [options]="genderOptions" 
+    controlLabel="Gender*" 
+    controlPlaceholder="Select your gender">
+  </sq-dropdown>
+</form>

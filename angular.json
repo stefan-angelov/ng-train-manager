@@ -23,8 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/@sq-ui/ng-sq-ui/sq-ui-theme.scss",
+              "./node_modules/font-awesome/scss/font-awesome.scss"
             ],
             "scripts": []
           },
